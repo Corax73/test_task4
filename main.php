@@ -16,3 +16,5 @@ $autoharvester -> getProduction();
 
 $autoharvester -> getCountTrees();
 
+$autoharvester -> getWeightProduct();
+

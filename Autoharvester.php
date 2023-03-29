@@ -78,6 +78,7 @@ class Autoharvester
 		}
 
 		$typeProduct = array_keys($this -> productionPerWeek);
+
 		foreach ($typeProduct as $product) {
 
 			print $product . ' collected ' . $this -> productionPerWeek[$product] . "\n";
@@ -100,5 +101,58 @@ class Autoharvester
 
         }
     }
-    
+
+    /**
+     * @return int
+     */
+    public function getWeightProduct() : void
+    {
+
+        $typeProduct = array_keys($this -> productionPerWeek);
+
+		foreach ($typeProduct as $product) {
+
+			$weight = [];
+
+            for ($i = 0; $i < $this -> productionPerWeek[$product]; $i++) {
+
+                $pear = new Pear;
+                $appleTree = new AppleTree;
+
+                if ($product == $pear -> product) {
+
+                    if (!isset($weight[$product])) {
+                        
+                        $weight[$product] = 0;
+                        
+                        $weight[$product] += $pear -> getFetalWeight();
+                    
+                    } else {
+
+                        $weight[$product] += $pear -> getFetalWeight();
+
+                    }
+
+                } elseif ($product == $appleTree -> product) {
+
+                    if (!isset($weight[$product])) {
+                        
+                        $weight[$product] = 0;
+                        $weight[$product] += $appleTree -> getFetalWeight();
+                    
+                    } else {
+
+                        $weight[$product] += $appleTree -> getFetalWeight();
+
+                    }
+                    
+                }
+
+            }
+
+            print 'Weight ' . $product . ' ' . $weight[$product] . "\n";
+
+		}
+
+    }
 }

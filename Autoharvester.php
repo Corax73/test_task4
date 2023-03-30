@@ -56,7 +56,7 @@ class Autoharvester
 
         for ($i = 0; $i <= 6; $i++){
 
-            foreach ($this -> trees as $typeTree){
+            foreach ($this -> trees as $typeTree) {
 
                 foreach ($typeTree as $tree) {
 
@@ -97,7 +97,7 @@ class Autoharvester
 
             $count = count($this -> trees[$typeTree]);
 
-            print 'Count ' . $this -> trees[$typeTree][0]->treeBreed . ' ' . $count . "\n";
+            print 'Count ' . $this -> trees[$typeTree][0] -> treeBreed . ' ' . $count . "\n";
 
         }
     }
@@ -155,4 +155,5 @@ class Autoharvester
 		}
 
     }
+    
 }

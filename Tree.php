@@ -1,11 +1,9 @@
 <?php
 
 abstract class Tree
-{
-    
-    static int $id = 0;
-    
-    public int $animalId; 
+{    
+    static int $id = 0;    
+    public int $treeId; 
     
     /**
      * @return int

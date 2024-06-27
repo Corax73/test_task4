@@ -7,14 +7,13 @@ spl_autoload_register(function ($class_name) {
 $numberAppleTree = 10;
 $numberPear = 15;
 
-$autoharvester = New Autoharvester();
+$autoharvester = new Autoharvester();
 
-$autoharvester -> addTree('AppleTree', $numberAppleTree);
-$autoharvester -> addTree('Pear', $numberPear);
+$autoharvester->addTree('AppleTree', $numberAppleTree);
+$autoharvester->addTree('Pear', $numberPear);
 
-$autoharvester -> getProduction();
+$autoharvester->getProduction();
 
-$autoharvester -> getCountTrees();
+$autoharvester->getCountTrees();
 
-$autoharvester -> getWeightProduct();
-
+$autoharvester->getWeightProduct();
